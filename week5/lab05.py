@@ -131,8 +131,9 @@ if not input_invalid:
     print("    |    Your belt: ", belt)
 
     ## Lab 5 - Question 4: Use Loot
-    
+    belt, health_points = functions_lab05.use_loot(belt, health_points)
 
+    
     print("    ------------------------------------------------------------------")
     print("    |", end="    ")
     input("Analyze the roll (Press enter)")
@@ -170,11 +171,12 @@ if not input_invalid:
 
     # Lab 5: Call Recursive function
     print("    |", end="    ")
+
     num_dream_lvls = input("How many dream levels do you want to go down?")
-    if :
-        
-        
-        
+    if num_dream_lvls!=0:
+        health_points-=1
+        crazy_level = functions_lab05.inception_dream(num_dream_lvls)
+        combat_strength+=crazy_level
         print("combat strength: " + str(combat_strength))
         print("health points: " + str(health_points))
 
