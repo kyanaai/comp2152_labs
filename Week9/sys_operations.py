@@ -39,7 +39,7 @@ file_object_TextIO = os.fdopen(file_handle, "w+")
 file_object_TextIO.write("Some string to write to the file")
 file_object_TextIO.flush()
 
-print("\nProcess {os.getpid()} Forking now")
+print(f"\nProcess {os.getpid()} Forking now")
 pid = os.fork()
 
 if pid == 0:
@@ -53,7 +53,7 @@ if pid == 0:
     sys.exit(0)
 else:
     # Parent Process
-    print("\n[parent process ID: {os.getpid()}] , Child PID: {pid}")
+    print(f"\n[parent process ID: {os.getpid()}] , Child PID: {pid}")
     print("Wait for the child to complete modification")
     os.wait()
     print("Child Process Finished the modification") 
