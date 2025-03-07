@@ -35,7 +35,7 @@ while not input_valid and i in range(5):
         else:
             input_valid = True
     except ValueError:
-        print("Exception: Invalid input. Player enter a valid integer number.")
+        print("Exception: Invalid input. Player needs to enter a valid integer number.")
         
 
 m_input_valid = False
@@ -58,7 +58,7 @@ while not m_input_valid and i in range(5):
         else:
             m_input_valid = True
     except ValueError:
-        print("Exception: Invalid input. Monster enter a valid integer number.")
+        print("Exception: Invalid input. Monster needs to enter a valid integer number.")
 
 if input_valid and m_input_valid:
     # Input was valid - broke out of while loop
@@ -79,6 +79,11 @@ print("Player rolled " + str(m_combat_strength) + " combat strength for the mons
 input("Roll the dice for the monster's health points (Press enter)")
 m_health_points = random.choice(big_dice_options)
 print("Player rolled " + str(m_health_points) + " health points for the monster")
+
+try:
+    m_health_points = function.hero_attacks("string 1" , "string 2")
+except TypeError as te:
+    print("Error Class: " + str(te) )
 
 # Loop while the monster and the player are alive. Call fight sequence functions
 while m_health_points > 0 and health_points > 0:
